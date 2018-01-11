@@ -1,0 +1,230 @@
+.header-top{
+  color: $lightBlue;
+  padding: 23px 0 17px;
+}
+.logo{
+  &__img{
+    margin-right: 15px;
+  }
+  &__title{
+    font-size: 12px;
+    text-transform: uppercase;
+    @include media(992px){
+      display: block;
+    }
+  }
+  @include media(768px){
+    text-align: center;
+  }
+}
+.header-contacts{
+  font-size: 18px;
+  text-align: right;
+  &__tel{
+    position: relative;
+    line-height: 33px;
+    &:first-child{
+      &:before{
+        content: '';
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url(../images/header-contacts-phone.png) no-repeat center;
+        @include media(576px){
+          display: none;
+        }
+      }
+    }
+  }
+  &__address{
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: right;
+    @include media(768px){
+      text-align: center;
+    }
+  }
+  @include media(768px){
+    text-align: center;
+  }
+
+}
+.header-bottom{
+  background-color: $lightBlue;
+}
+
+.menu{
+  display: flex;
+  &__item{
+    &:first-child{
+      @include media(992px){
+        display: none;
+      }
+    }
+    @include media(767px){
+      margin-bottom: 10px;
+      width: calc(100% + 15px);
+    }
+  }
+  &__link{
+    display: inline-block;
+    color: #fff;
+    padding: 0 20px;
+    line-height: 78px;
+    position: relative;
+    transition: background-color .3s;
+    &:after{
+      content:'';
+      background-color: transparent;
+      width: 100%;
+      height: 8px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: background-color .3s;
+    }
+    &:hover{
+      background-color: $darkBlue;
+      &:after{
+        background-color: $darkBlue;
+        @include media(767px){
+          display: none;
+        }
+      }
+      @include media(767px){
+        background-color: transparent;
+      }
+    }
+    @include media(992px){
+      font-size: 16px;
+      padding: 0 10px;
+    }
+    @include media(767px){
+      line-height: 1;
+      background-color: transparent;
+    }
+  }
+  @include media(767px){
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    // justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+#toggle-menu{
+  @include media(768px){
+    background-color: $lightBlue;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    width: calc(100% + 15px);
+    display: none;
+  }
+
+}
+
+.header-feedback{
+  &__btn{
+    margin-left: auto;
+    display: block;
+    max-width: 164px;
+    color: $darkBlue;
+    font-size: 10px;
+    padding: 7px 17px 7px 44px;
+    background-color: #1a412f;
+    background-image: linear-gradient(to bottom, #ddf1ff 0%, #a7cae2 100%);
+    border-radius: 3px;
+    text-align: left;
+    position: relative;
+    transition: background-image .3s;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 15px;
+    }
+    &_call{
+      margin-bottom: 5px;
+      &:before{
+        width: 14px;
+        height: 15px;
+        background: url(../images/header-feedback-phone.png)no-repeat center;
+      }
+
+    }
+    &_mail{
+      &:before{
+        width: 17px;
+        height: 12px;
+        background: url(../images/header-feedback-mail.png)no-repeat center;
+      }
+
+    }
+    &:hover{
+      background-image: linear-gradient(to bottom, #ddf1ff 100%, #a7cae2 0%);
+    }
+    @include media(768px){
+      margin: 0 auto 5px;
+    }
+  }
+  @include media(767px){
+    width: calc(100% + 15px);
+  }
+}
+
+.burger{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin: 0 auto;
+  cursor:pointer;
+  text-align: center;
+  display: none;
+
+  span, span:before, span:after{
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    margin: 0 auto;
+  }
+  span{
+    top: 50%;
+    transform: translateY(-50%);
+    &:before, &:after{
+      content: '';
+      transition: all .5s;
+    }
+    &:before{
+      top: -5px;
+    }
+    &:after{
+      top: 5px;
+    }
+
+
+    }
+  //   &:hover{
+  //     span:before,span:after{
+  //       top: 0;
+  //     }
+  //     span:before{
+  //       transform: rotate(45deg);
+  //     }
+  // }
+  @include media(767px){
+    display: block;
+  }
+}
+
+// @keyframes burgerIn {
+//   0% {}
+// }

@@ -1,0 +1,23 @@
+{
+    "vars": {
+        "siteName": "Отдел медицинской техники",
+        "base": "./individual/views",
+        "baseUrl": "/"
+    },
+    "blocks": {
+        "logo_image": "public/images/temp/logo.png",
+        "header_address": "г. Екатеринбург, ул. Ясная, 35",
+        "header_phone": "(343) 231-80-21",
+        "header_time_header": "Время работы",
+        "header_time_value": "9:00—17:30",
+        "copyright": "© МО «Отдел Медицинской Техники», 1995–2017",
+        "counters": "counters",
+        "home_about_link": "#",
+        "home_image": "public/images/temp/seotext.png"
+    },
+    "settings": {
+        "system": {
+            "title": "Отдел медицинской техники"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+html, body{
+  font-family: $ff-verdana-regular;
+  height: 100%;
+  margin: 0;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+h1,h2,h3, p{
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  max-width: 100%;
+  height:auto;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style-type: none;
+}
+*{
+  box-sizing: border-box;
+  outline: none;
+}
+*:before, *:after{
+  box-sizing:inherit;
+}

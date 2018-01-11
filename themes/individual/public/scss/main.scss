@@ -1,0 +1,24 @@
+// LIBS
+@import "../libs/bootstrap/scss/bootstrap-grid.scss";
+@import "../libs/bootstrap/scss/bootstrap.scss";
+@import "../libs/font-awesome/font-awesome.scss";
+
+// global
+@import "global/fonts.scss";
+@import "global/vars.scss";
+@import "global/mixins.scss";
+@import "global/base.scss";
+@import "global/common.scss";
+
+// templates
+@import "templates/crumbs.scss";
+@import "templates/header.scss";
+@import "templates/footer.scss";
+@import "templates/feedback-forms.scss";
+
+// pages
+@import "pages/home.scss";
+@import "pages/about.scss";
+@import "pages/news.scss";
+@import "pages/contacts.scss";
+@import "pages/catalog.scss";

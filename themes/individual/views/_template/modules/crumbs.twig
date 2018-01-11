@@ -1,0 +1,16 @@
+{#{% set links = [
+  {href: '../home', name: 'Главная', sep: '/', class: 'breadcrumbs__link'},
+  {href: '../about', name: 'Контакты', class: 'breadcrumbs__link'},
+] %}#}
+<div class="row">
+  <div class="col">
+    <div class="breadcrumbs">
+        {% for link in links if link.href and link.sep %}
+            <a href="{{ link.href }}" class="{{ link.class }}">{{ link.name }}</a>
+            <span class="sep">{{ link.sep }}</span>
+        {% else %}
+        {% endfor %}
+        <span class="{{ (links|last).class }}">{{ (links|last).name }}</span>
+    </div>
+  </div>
+</div>
